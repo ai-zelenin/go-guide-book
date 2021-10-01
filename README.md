@@ -1,1 +1,1 @@
-# go-study-book
+# go-guide-book
