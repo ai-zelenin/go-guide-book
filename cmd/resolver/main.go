@@ -92,6 +92,9 @@ func handleFile(reader io.Reader, path string, info fs.FileInfo) (io.Reader, err
 				log.Println(err)
 				return i
 			}
+			if result == nil {
+				return i
+			}
 			return result
 		})
 		buf.Write(res)
@@ -101,6 +104,10 @@ func handleFile(reader io.Reader, path string, info fs.FileInfo) (io.Reader, err
 }
 
 func createSpoilerCodeByLink(origin, rootDir, link string) ([]byte, error) {
+	sourceFileExt := filepath.Ext(link)
+	if strings.ToLower(sourceFileExt) == ".md" {
+		return nil, nil
+	}
 	pwd, err := os.Getwd()
 	if err != nil {
 		return nil, err
