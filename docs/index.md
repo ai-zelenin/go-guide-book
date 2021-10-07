@@ -1,5 +1,3 @@
 # go-guide-book
 
 
-
-

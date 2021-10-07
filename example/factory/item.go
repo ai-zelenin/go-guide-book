@@ -3,18 +3,23 @@ package factory
 import "fmt"
 
 type Item struct {
-	Dependency *Dependency
+	dependency *Dependency
+	Data       string
 }
 
 func NewItem(dependency *Dependency) *Item {
-	return &Item{Dependency: dependency}
+	return &Item{
+		dependency: dependency,
+		Data:       "Item data",
+	}
 }
 
-func (i *Item) DoSomething() error {
-	data, err := i.Dependency.GetData()
+func (i *Item) PrintData() error {
+	data, err := i.dependency.GetData()
 	if err != nil {
 		return err
 	}
-	fmt.Println(data)
+	// Print data to stdout
+	fmt.Printf("%s - %s", i.Data, data)
 	return nil
 }
