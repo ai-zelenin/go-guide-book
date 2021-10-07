@@ -126,10 +126,10 @@ func createSpoilerCodeByLink(origin, rootDir, link string) ([]byte, error) {
 		return nil, err
 	}
 	buf := bytes.NewBuffer(nil)
-	buf.WriteString("<details>\n")
-	buf.WriteString(fmt.Sprintf("<summary>%s</summary>\n\n", origin))
+	//buf.WriteString("<details>\n")
+	//buf.WriteString(fmt.Sprintf("<summary>%s</summary>\n\n", origin))
 	buf.WriteString(fmt.Sprintf("```%s\n %s\n ```\n", codeExt, fileData))
-	buf.WriteString("</details>")
+	//buf.WriteString("</details>")
 	return buf.Bytes(), nil
 }
 
