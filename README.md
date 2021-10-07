@@ -1,3 +1,3 @@
 # go-guide-book
 
-## [RU](ru/index.md)
+## [RU](ru/readme.md)
