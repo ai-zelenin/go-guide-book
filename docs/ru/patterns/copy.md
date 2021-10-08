@@ -50,6 +50,7 @@ func ExampleCopy1() {
 	fmt.Printf("item - %#v", item)
 	fmt.Printf("new item - %#v", newItem)
 }
+
 // out
 // item - &main.Item{Text:"OK", Number:1, Numbers:[]int{99, 2, 3}}
 // new item - main.Item{Text:"OK", Number:1, Numbers:[]int{99, 2, 3}}

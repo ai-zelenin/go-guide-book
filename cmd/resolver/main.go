@@ -105,7 +105,7 @@ func handleFile(reader io.Reader, path string, info fs.FileInfo) (io.Reader, err
 
 func createSpoilerCodeByLink(origin, rootDir, link string) ([]byte, error) {
 	sourceFileExt := filepath.Ext(link)
-	if strings.ToLower(sourceFileExt) == ".md" {
+	if strings.ToLower(sourceFileExt) != ".go" {
 		return nil, nil
 	}
 	pwd, err := os.Getwd()
