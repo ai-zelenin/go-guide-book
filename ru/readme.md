@@ -1,11 +1,15 @@
 # RU
 
-# Соглашения
+## Соглашения
 
-# Паттерны
+#### [Структура пакета](conventions/package_structure.md)
 
-### [DI](patterns/di.md)
+## Паттерны
 
-### [Копирование объектов](patterns/copy.md)
+#### [DI](patterns/di.md)
 
-### [Фабрики](patterns/factory.md)
+#### [Фабрики](patterns/factory.md)
+
+#### [Копирование объектов](patterns/copy.md)
+
+
